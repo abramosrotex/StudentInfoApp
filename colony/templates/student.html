@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>I am in a Student page</h1>
+    <h3>Student Name: {{ student.first_name }} {{ student.last_name }}</h3>
+    <p>Email Id: {{ student.email_id }}</p>
+    <p>Phone Number: {{ student.phone_number }}</p>
+    <p>Gender: {{ student.student_gender }}</p>
+    <p>Address: {{ student.student_address }}</p>
+    {% for department in student.student_department.all %}
+    <em>{{ department }}</em>
+    {% endfor %}
+    <p>Birth Date: {{ student.date_of_birth }}</p>
+  </body>
+</html>
